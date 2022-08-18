@@ -1,0 +1,17 @@
+{
+  "domain": "ecowitt",
+  "name": "Ecowitt Weather Station",
+  "version": "0.1",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/ecowitt",
+  "requirements": [
+    "aioecowitt==2022.08.2"
+  ],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@pvizeli"
+  ]
+}

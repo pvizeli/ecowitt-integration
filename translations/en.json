@@ -1,0 +1,22 @@
+{
+    "config": {
+		"title": "Ecowitt Weather Station",
+		"abort": {
+		    "invalid_port": "Port is allready used.",
+		    "unknown": "Unknown error."
+		},
+		"step": {
+		    "user": {
+				"description": "The following steps must be performed too setting up this integration.\nIf you have not already done so, please do this now.\n\nUse the WS View app (on your phone) for your Ecowitt device, and connect to it.\nPick menu -> device list -> Pick your station.\nHit next repeatedly to move to the last screen titled 'Customized'\n\nPick the protocol Ecowitt, and put in the ip/hostname of your hass server.\nPath have to match, you can copy with secure token /.\nPick a reasonable value for updates, like 60 seconds.\nSave configuration. The Ecowitt should then start attempting to send data to your server.",
+				"title": "Instructions for setting up the Ecowitt."
+		    },
+		    "initial_options": {
+				"title": "Ecowitt Parameters",
+				"data": {
+				    "port": "Listening port",
+					"path": ""
+				}
+		    }
+		}
+    }
+}
