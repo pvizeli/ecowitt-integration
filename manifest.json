@@ -5,7 +5,7 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/ecowitt",
   "requirements": [
-    "aioecowitt==2022.08.2"
+    "aioecowitt==2022.08.3"
   ],
   "ssdp": [],
   "zeroconf": [],

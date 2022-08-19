@@ -33,6 +33,8 @@ from homeassistant.const import (
     TEMP_FAHRENHEIT,
     UV_INDEX,
     AREA_SQUARE_METERS,
+    PRECIPITATION_MILLIMETERS_PER_HOUR,
+    PRECIPITATION_INCHES_PER_HOUR,
 )
 
 from .entity import EcowittEntity
@@ -119,16 +121,28 @@ ECOWITT_SENSORS_MAPPING = {
         SensorStateClass.MEASUREMENT,
         _IMPERIAL,
     ),
-    EcoWittSensorTypes.RAIN_RATE_MM: (
+    EcoWittSensorTypes.RAIN_COUNT_MM: (
         None,
         LENGTH_MILLIMETERS,
         SensorStateClass.TOTAL_INCREASING,
         _METRIC,
     ),
-    EcoWittSensorTypes.RAIN_RATE_INCHES: (
+    EcoWittSensorTypes.RAIN_COUNT_INCHES: (
         None,
         LENGTH_INCHES,
         SensorStateClass.TOTAL_INCREASING,
+        _IMPERIAL,
+    ),
+    EcoWittSensorTypes.RAIN_RATE_MM: (
+        None,
+        PRECIPITATION_MILLIMETERS_PER_HOUR,
+        SensorStateClass.MEASUREMENT,
+        _METRIC,
+    ),
+    EcoWittSensorTypes.RAIN_RATE_INCHES: (
+        None,
+        PRECIPITATION_INCHES_PER_HOUR,
+        SensorStateClass.MEASUREMENT,
         _IMPERIAL,
     ),
     EcoWittSensorTypes.LIGHTNING_DISTANCE_KM: (
