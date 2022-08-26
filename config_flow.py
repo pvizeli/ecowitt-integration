@@ -23,9 +23,7 @@ _LOGGER = logging.getLogger(__name__)
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
         vol.Optional(CONF_PORT, default=DEFAULT_PORT): cv.port,
-        vol.Optional(CONF_PATH, default=f"/{secrets.token_urlsafe(16)}"): vol.All(
-            cv.string, vol.Maybe(vol.Match(r"^/\w+$"))
-        ),
+        vol.Optional(CONF_PATH, default=f"/{secrets.token_urlsafe(16)}"): cv.string,
     }
 )
 
