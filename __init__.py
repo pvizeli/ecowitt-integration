@@ -22,6 +22,8 @@ PLATFORMS: list[Platform] = [Platform.SENSOR, Platform.BINARY_SENSOR]
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     """Set up the Ecowitt component from UI."""
+    hass.data.setdefault(DOMAIN, {})
+
     ecowitt = hass.data[DOMAIN][entry.entry_id] = EcoWittListener(
         port=entry.data[CONF_PORT], path=entry.data[CONF_PATH]
     )
